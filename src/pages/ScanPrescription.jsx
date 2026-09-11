@@ -29,7 +29,7 @@ export default function ScanPrescription() {
     formData.append('file', selectedFile);
 
     try {
-      const response = await fetch('http://localhost:8000/api/scan-prescription', {
+      const response = await fetch('/api/scan-prescription', {
         method: 'POST',
         body: formData,
       });

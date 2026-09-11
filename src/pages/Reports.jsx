@@ -35,7 +35,7 @@ export default function Reports() {
       const formData = new FormData();
       formData.append('file', selectedFile);
 
-      const response = await fetch('http://localhost:8000/api/scan-report', {
+      const response = await fetch('/api/scan-report', {
         method: 'POST',
         body: formData,
       });

@@ -1,0 +1,17 @@
+# Python virtual environments
+venv/
+env/
+.venv/
+
+# Node modules
+node_modules/
+
+# Cache files
+__pycache__/
+*.pyc
+.next/
+dist/
+build/
+
+# Git
+.git/

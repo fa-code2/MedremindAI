@@ -61,7 +61,7 @@ async def scan_prescription(file: UploadFile = File(...)):
 
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.6-flash",
             contents=[
                 PRESCRIPTION_PROMPT,
                 {"inline_data": {"mime_type": file.content_type or "image/jpeg", "data": image_bytes}}
@@ -84,7 +84,7 @@ async def scan_report(file: UploadFile = File(...)):
     image_bytes = await file.read()
     try:
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.6-flash",
             contents=[
                 (
                     "Analyze this medical/lab report image. Extract key test parameters (e.g., blood sugar, "
